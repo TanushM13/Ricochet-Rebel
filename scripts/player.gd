@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-@export var max_speed: float = 600.0
-@export var slow_speed: float = 200.0
-@export var acceleration: float = 6000.0
-@export var friction: float = 5000.0
+@export var max_speed: float = 120.0
+@export var slow_speed: float = 40.0
+@export var acceleration: float = 1200.0
+@export var friction: float = 1000.0
 
-var current_speed: float = 600.0
+var current_speed: float = 120.0
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")

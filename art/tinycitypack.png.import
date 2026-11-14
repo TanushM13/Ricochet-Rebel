@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dypyp31n5j4w"
-path="res://.godot/imported/characters2.png-7e587c4eaf3d87f2f588691be07c531a.ctex"
+uid="uid://6b7au8087u8o"
+path="res://.godot/imported/tinycitypack.png-5329f515d94fc25105678bfc5b4d0c5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters2.png"
-dest_files=["res://.godot/imported/characters2.png-7e587c4eaf3d87f2f588691be07c531a.ctex"]
+source_file="res://art/tinycitypack.png"
+dest_files=["res://.godot/imported/tinycitypack.png-5329f515d94fc25105678bfc5b4d0c5c.ctex"]
 
 [params]
 
