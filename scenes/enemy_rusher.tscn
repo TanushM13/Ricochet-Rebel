@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bbef1uygobbv3"]
+
+[ext_resource type="PackedScene" uid="uid://mxatebwmw8vx" path="res://scenes/enemy.tscn" id="1_v6eg3"]
+[ext_resource type="Texture2D" uid="uid://dypyp31n5j4w" path="res://art/characters2.png" id="2_mh3ps"]
+
+[node name="Enemy" unique_id=1527700554 instance=ExtResource("1_v6eg3")]
+bullet_speed = 60
+move_speed = 90
+keep_distance = 70
+
+[node name="Sprite2D" parent="." index="0" unique_id=1301424982]
+texture = ExtResource("2_mh3ps")
+region_rect = Rect2(4, 56, 16, 16)
+
+[node name="ShootTimer" parent="." index="2" unique_id=740161262]
+wait_time = 0.8

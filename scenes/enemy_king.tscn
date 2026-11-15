@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://mxatebwmw8vx" path="res://scenes/enemy.tscn" id="1_base"]
+[ext_resource type="Texture2D" uid="uid://dupa38f7sp2gy" path="res://art/king.png" id="2_king"]
+
+[node name="Enemy" unique_id=1527700554 instance=ExtResource("1_base")]
+scale = Vector2(2.5, 2.5)
+health = 15
+bullets_per_shot = 5
+spread = 0.25
+move_speed = 30
+keep_distance = 140
+
+[node name="Sprite2D" parent="." index="0" unique_id=1301424982]
+texture = ExtResource("2_king")
+region_enabled = false
+scale = Vector2(0.04, 0.04)
+
+[node name="ShootTimer" parent="." index="2" unique_id=740161262]
+wait_time = 1.3

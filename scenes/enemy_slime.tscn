@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://mxatebwmw8vx" path="res://scenes/enemy.tscn" id="1_base"]
+
+[node name="Enemy" unique_id=1527700554 instance=ExtResource("1_base")]
+bullet_bounces = 5
+bullet_speed = 70
+
+[node name="Sprite2D" parent="." index="0" unique_id=1301424982]
+modulate = Color(0.4, 1, 0.4, 1)
+
+[node name="ShootTimer" parent="." index="2" unique_id=740161262]
+wait_time = 1.5

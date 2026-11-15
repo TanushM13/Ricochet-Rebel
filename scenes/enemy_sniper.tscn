@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bi1vnyjc30xg4"]
+
+[ext_resource type="PackedScene" uid="uid://mxatebwmw8vx" path="res://scenes/enemy.tscn" id="1_6ut3t"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rwlyv"]
+load_path = "res://.godot/imported/battle.png-f26382318538caf57e8d30d458ec19e8.ctex"
+
+[node name="Enemy" unique_id=1527700554 instance=ExtResource("1_6ut3t")]
+bullet_speed = 150
+move_speed = 20
+keep_distance = 170
+
+[node name="Sprite2D" parent="." index="0" unique_id=1301424982]
+texture = SubResource("CompressedTexture2D_rwlyv")
+region_rect = Rect2(256, 80, 16, 16)

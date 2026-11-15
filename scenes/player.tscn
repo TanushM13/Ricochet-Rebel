@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cq53euuwaomb2" path="res://art/battle.png" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://c5emlxs1u57a5" path="res://scenes/shield_pivot.gd" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dd2uu7xcem23m" path="res://art/shield.png" id="4_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://dlr0c7c5gwvov" path="res://art/heart3.png" id="6_tuyoq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cjo5l"]
 radius = 8.0
@@ -26,7 +27,7 @@ region_enabled = true
 region_rect = Rect2(272, 112, 16, 16)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1869619681]
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 
 [node name="ShieldPivot" type="Node2D" parent="." unique_id=233584972]
 script = ExtResource("3_dqkch")
@@ -44,3 +45,38 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldPivot/ShieldBody" unique_id=324232849]
 shape = SubResource("RectangleShape2D_43wnm")
+
+[node name="Timer" type="Timer" parent="ShieldPivot" unique_id=443280590]
+wait_time = 5.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852596291]
+
+[node name="Hearts" type="HBoxContainer" parent="CanvasLayer" unique_id=1940203371]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hearts" unique_id=1908208689]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Hearts" unique_id=1160285284]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Hearts" unique_id=1438775799]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="timeout" from="ShieldPivot/Timer" to="ShieldPivot" method="_on_timer_timeout"]
