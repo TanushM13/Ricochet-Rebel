@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var slow_speed: float = 40.0
 @export var acceleration: float = 1200.0
 @export var friction: float = 1000.0
+@export var health: int = 3
 
 var current_speed: float = 120.0
 
@@ -18,4 +19,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 	move_and_slide()
-	
+
+func hit() -> void:
+	health -= 1
+	if health <= 0:
+		get_tree().reload_current_scene.call_deferred()

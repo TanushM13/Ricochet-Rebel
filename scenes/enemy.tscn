@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://mxatebwmw8vx"]
+
+[ext_resource type="Texture2D" uid="uid://cq53euuwaomb2" path="res://art/battle.png" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://clo4a7nj1hcdc" path="res://scripts/enemy.gd" id="1_md0e3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjo5l"]
+radius = 7.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1527700554 groups=["enemies"]]
+collision_layer = 4
+collision_mask = 15
+motion_mode = 1
+script = ExtResource("1_md0e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1301424982]
+texture = ExtResource("1_7p1mj")
+region_enabled = true
+region_rect = Rect2(256, 128, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1216811621]
+shape = SubResource("CircleShape2D_cjo5l")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=740161262]
+wait_time = 2.5
+autostart = true
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=1051578104]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

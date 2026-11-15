@@ -8,7 +8,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_cjo5l"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1262801826]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43wnm"]
+size = Vector2(4, 13.5)
+
+[node name="Player" type="CharacterBody2D" unique_id=1262801826 groups=["player"]]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_onrkg")
 
@@ -32,3 +36,11 @@ position = Vector2(13, 6.2864274e-09)
 rotation = 1.5740623
 scale = Vector2(0.8750001, 0.6875)
 texture = ExtResource("4_qlg0r")
+
+[node name="ShieldBody" type="StaticBody2D" parent="ShieldPivot" unique_id=1338768926 groups=["shield"]]
+position = Vector2(13, 0)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldPivot/ShieldBody" unique_id=324232849]
+shape = SubResource("RectangleShape2D_43wnm")
