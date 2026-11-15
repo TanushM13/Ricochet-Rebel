@@ -13,4 +13,4 @@ texture = ExtResource("2_mh3ps")
 region_rect = Rect2(4, 56, 16, 16)
 
 [node name="ShootTimer" parent="." index="2" unique_id=740161262]
-wait_time = 0.8
+wait_time = 1.5
